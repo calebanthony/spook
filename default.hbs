@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Favicon --}}
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{!-- Styles --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "build/css/bundle.css"}}" />
+
+    {{!-- Ghost magic --}}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+    {{!-- /partials/navigation.hbs --}}
+    {{navigation}}
+
+    <div class="container">
+
+        {{!-- The rest of the website goes here --}}
+        {{{body}}}
+
+        {{!-- The tiny footer at the very bottom --}}
+        <footer class="site-footer">
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    {{!-- Ghost magic --}}
+    {{ghost_foot}}
+    {{!-- Scripts --}}
+    <script type="text/javascript" src="{{asset "/build/js/bundle.js"}}"></script>
+
+</body>
+</html>
