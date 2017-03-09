@@ -1,3 +1,23 @@
-.site-footer {
-    color: #242424;
+// A tidbit to show Font Awesome where to look for the fonts.
+// This is required for Font Awesome to build properly with Webpack.
+$fa-font-path: "../../node_modules/font-awesome/fonts";
+
+// Import Bootstrap and Font Awesome
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+
+// Import our own SCSS files.
+@import "footer.scss";
+
+// Write your own SCSS here that doesn't yet belong in its own file.
+.post {
+    margin-top: 4rem;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+}
+
+.nav-item {
+    font-size: 1.5rem;
 }

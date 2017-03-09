@@ -1,0 +1,15 @@
+<nav role="navigation" aria-label="Page navigation">
+    <ul class="pagination justify-content-end">
+        {{#if prev}}
+            <li class="page-item">
+                <a class="page-link" href="{{page_url prev}}">&larr; Newer Posts</a>
+            </li>
+        {{/if}}
+        <li class="page-number"><span>Page {{page}} of {{pages}}</span></li>
+        {{#if next}}
+            <li class="page-item">
+                <a class="page-link" href="{{page_url next}}">Older Posts &larr;</a>
+            </li>
+        {{/if}}
+    </ul>
+</nav>

@@ -1,0 +1,21 @@
+<div class="col-sm-12 col-md-10 offset-md-1">
+    {{!-- This is the post loop - each post will be output using this markup --}}
+    {{#foreach posts}}
+    <article class="{{post_class}}">
+        <header class="post-header">
+            <h1 class="post-title display-4">
+                <a href="{{url}}">{{title}}</a>
+            </h1>
+            <h5 class="text-muted pl-4">
+                by {{author}} on <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+            </h5>
+        </header>
+        <section class="post-excerpt">
+            <p>{{excerpt}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+        </section>
+    </article>
+    {{/foreach}}
+
+    {{!-- Previous/next page links - displayed on every page --}}
+    {{pagination}}
+</div>

@@ -1,0 +1,25 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="{{@blog.url}}">
+        {{#if @blog.logo}}
+            <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+        {{/if}}
+
+        <i class="fa fa-search"></i>{{@blog.title}}
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            {{#foreach navigation}}
+                <li class="nav-item {{#if current}}active{{/if}}">
+                    <a class="nav-link" href="{{url absolute="true"}}">
+                        {{label}}
+                        {{#if current}}<span class="sr-only">(current)</span>{{/if}}
+                    </a>
+                </li>
+            {{/foreach}}
+        </ul>
+    </div>
+</nav>
