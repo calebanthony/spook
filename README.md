@@ -4,6 +4,8 @@ A starter Ghost theme built using Bootstrap 4 and Font Awesome.
 
 Make the most of styling with SASS and building with Webpack.
 
+![demo image](http://i.imgur.com/DQe5DjF.png)
+
 ## Features
 * Use Webpack to compile your JS and SCSS easily that gets pulled in by the theme.
 * Comes with jQuery enabled out of the box for your JS needs.
