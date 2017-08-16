@@ -5,14 +5,25 @@
     "production": "node_modules/webpack/bin/webpack.js -p --progress --hide-modules --config=webpack.config.js"
   },
   "name": "spook",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Base theme for Ghost built on Bootstrap 4 with Font Awesome.",
   "main": "index.js",
-  "author": "Caleb Anthony",
+  "author": {
+    "name": "Caleb Anthony",
+    "email": "caleb.m.anthony@gmail.com"
+  },
   "license": "ISC",
+  "engines": {
+    "ghost": ">=1.0.0"
+  },
+  "config": {
+    "posts_per_page": 10
+  },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
-    "font-awesome": "^4.7.0"
+    "bootstrap": "^4.0.0-beta",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.2"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
