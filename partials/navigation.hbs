@@ -2,12 +2,12 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="{{@blog.url}}">
-        {{#if @blog.logo}}
-            <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+    <a class="navbar-brand" href="{{@site.url}}">
+        {{#if @site.logo}}
+            <img src="{{@site.logo}}" alt="{{@site.title}}" />
         {{/if}}
 
-        <i class="fa fa-snapchat-ghost"></i>{{@blog.title}}
+        <i class="fa fa-snapchat-ghost"></i>{{@site.title}}
     </a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">

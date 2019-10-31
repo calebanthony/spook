@@ -2,27 +2,42 @@
   "scripts": {
     "dev": "node_modules/webpack/bin/webpack.js --progress --hide-modules --config=webpack.config.js",
     "watch": "node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=webpack.config.js",
-    "production": "node_modules/webpack/bin/webpack.js -p --progress --hide-modules --config=webpack.config.js"
+    "production": "node_modules/webpack/bin/webpack.js -p --progress --hide-modules --config=webpack.config.js",
+    "test": "gscan --v3 ."
   },
   "name": "spook",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Base theme for Ghost built on Bootstrap 4 with Font Awesome.",
   "main": "index.js",
   "author": {
     "name": "Caleb Anthony",
     "email": "caleb.m.anthony@gmail.com"
   },
-  "license": "ISC",
+  "gpm": {
+    "type": "theme",
+    "categories": [
+        "Minimal",
+        "Magazine"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
+  "license": "MIT",
   "engines": {
-    "ghost": ">=1.0.0"
+    "ghost": ">=3.0.0",
+    "ghost-api": "v3"
   },
   "config": {
-    "posts_per_page": 10
+    "posts_per_page": 10,
+    "image_sizes": {}
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.2"
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.16.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
@@ -31,6 +46,7 @@
     "css-loader": "^0.26.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
+    "gscan": "3.0.0",
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.2",
     "style-loader": "^0.13.2",

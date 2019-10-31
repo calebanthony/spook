@@ -1,0 +1,69 @@
+// Images
+.kg-image-card,
+.kg-embed-card {
+  @extend .figure;
+
+  .kg-image {
+    @extend .figure-img;
+  }
+}
+
+.kg-image {
+  @extend .img-fluid;
+}
+
+.kg-width-wide {
+  max-width: 75vw;
+}
+
+.kg-width-full {
+  max-width: 90vw;
+}
+
+// Galleries
+.kg-gallery-container {
+  @extend .container;
+}
+
+.kg-gallery-row {
+  @extend .row;
+}
+
+.kg-gallery-image {
+  @extend .img-fluid;
+}
+
+// Bookmarks
+.kg-bookmark-card {
+  @extend .card;
+}
+
+.kg-bookmark-container {
+  @extend .container;
+}
+
+.kg-bookmark-content {
+  @extend .card-body;
+}
+
+.kg-bookmark-title {
+  @extend .card-title;
+}
+
+.kg-bookmark-description {
+ @extend .card-text;
+}
+
+.kg-bookmark-metadata {
+  @extend .list-group;
+}
+
+.kg-bookmark-icon,
+.kg-bookmark-author,
+.kg-bookmark-publisher {
+  @extend .list-group-item;
+}
+
+.kg-bookmark-thumbnail {
+  @extend .img-fluid;
+}
