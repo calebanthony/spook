@@ -1,10 +1,5 @@
-// A tidbit to show Font Awesome where to look for the fonts.
-// This is required for Font Awesome to build properly with Webpack.
-$fa-font-path: "~font-awesome/fonts";
-
-// Import Bootstrap and Font Awesome
+// Import Bootstrap
 @import "~bootstrap/scss/bootstrap.scss";
-@import "~font-awesome/scss/font-awesome.scss";
 
 // Import our own SCSS files.
 @import "footer.scss";

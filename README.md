@@ -21,7 +21,8 @@ Make the most of styling with SASS and building with Webpack.
   * `git clone https://github.com/calebanthony/spook.git`
 3. Move into the `spook` directory.
 4. Run `npm install`
-5. Run `npm run dev` to generate the `assets/build` directory that the theme pulls from.
+5. To set up Font Awesome, create an account at fontawesome.com and create a Kit. Use that code to replace the default in `default.hbs` in the `<head>`.
+6. Run `npm run dev` to generate the `assets/build` directory that the theme pulls from.
 
 ## How To Use
 Spook is designed to be barebones and let you just start editing.
