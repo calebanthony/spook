@@ -1,0 +1,10 @@
+version: '3'
+services:
+  blog:
+    image: ghost:latest
+    ports: 
+      - 2368:2368
+    volumes: 
+      - .:/var/lib/ghost/content/themes/casper
+    environment: 
+      - NODE_ENV=development

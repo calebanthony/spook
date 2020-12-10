@@ -1,6 +1,5 @@
 var webpack = require('webpack');
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     // Tell Webpack where to start looking for your files.
@@ -25,32 +24,33 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: 'css-loader!sass-loader'
-                })
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
+                ]
             },
             {
-                test:/\.js$/,
+                test: /\.js$/,
                 // babel-loader brings in all that ES2015 goodness.
-                use: 'babel-loader'
+                use: ['babel-loader']
             },
             {
                 test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-                loader: 'file-loader?name=../fonts/[name].[ext]'
+                use: ['file-loader?name=../fonts/[name].[ext]']
             }
         ]
     },
     plugins: [
         // This plugin lets us pull out our CSS into its own file.
-        new ExtractTextPlugin('bundle.css'),
+        new MiniCssExtractPlugin({
+            filename: 'bundle.css'
+        }),
         // To remove jQuery altogether, simply comment out this plugin.
-        // START COMMENTED LINES
         new webpack.ProvidePlugin({
             jQuery: 'jquery',
             $: 'jquery',
             jquery: 'jquery'
         })
-        // END COMMENTED LINES
     ]
 }
